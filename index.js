@@ -16,6 +16,19 @@ let table = document.querySelector('#table');
 let newGame = document.querySelector('#new_game')
 let winGame=document.querySelector("#win_game")
 
+//disable button if digits less than 4 .length
+function showValue(dd)
+{
+    if(dd.value.length!=4)
+    {
+        checkDigits.disabled = true;
+      
+    }else{
+        checkDigits.disabled=false;
+    }
+  
+}
+
 
 ///Array to store the previous user gusses values.
 //ArrIndex is to point on the stored value ( index ) and to display it. 
