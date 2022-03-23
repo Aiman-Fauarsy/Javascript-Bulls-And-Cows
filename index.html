@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css-reset.css">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js" defer></script>
+    <title>Bulls and cows</title>
+</head>
+<body>
+    <div class="tittle">
+        <h1>Cows and Bulls game</h1>
+        <h2> <span class="bulls"> Bulls </span>= correct number in the <span class="bulls">correct position</span></h4>
+        <h2> <span class="cows">Cows</span> = correct number in the <span class="cows">wrong position</span></h4>
+        <h2 id="win_game"></h2>
+    </div>
+    <div class="game-container">
+        <div class="header">
+            <div class="taskbar">
+                <span>4 digits</span> <div class="navbar-buttons"><button>-</button><button>X</button></div>
+            </div>
+            <div class="settings">
+                <div class="links">
+                    <a href="#href">Game</a>
+                    <a href="#href">View</a>
+                    <a href="https://en.wikipedia.org/wiki/Bulls_and_Cows" target="_blank">Help</a>
+                </div>
+                <hr>
+                <div class="imgs">
+                    <img id="new_game" src="./images/new_game.JPG" alt="#newGame">
+                    <img src="./images/quit.JPG" alt="#quit">
+                </div>
+            </div>
+            <hr>
+            <div class="game">
+                <div class="play">
+                    <input type="number" id="gussed_number" placeholder="Guess 4 digits number">
+                    <button type="submit" id="guess_number">GO</button>
+                </div>
+                <div class="results">
+                    <table id="table">
+                        <tr>
+                          <th>Tries</th>
+                          <th>Guess</th>
+                          <th>Cows</th>
+                          <th>Bulls</th>
+                        </tr>
+                  
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
