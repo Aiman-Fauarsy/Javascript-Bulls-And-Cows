@@ -16,6 +16,18 @@ let table = document.querySelector('#table');
 let newGame = document.querySelector('#new_game')
 let winGame=document.querySelector("#win_game")
 
+
+///Array to store the previous user gusses values.
+//ArrIndex is to point on the stored value ( index ) and to display it. 
+let resultsArr = [];
+let arrIndex = 0;
+
+//Cows and bulls the values for the code symbols for the users. 
+let removeDuplicateCows = [];
+let cows =0;
+let bulls = 0;
+
+
 //disable button if digits less than 4 .length
 function showValue(dd)
 {
@@ -29,19 +41,7 @@ function showValue(dd)
   
 }
 
-
-///Array to store the previous user gusses values.
-//ArrIndex is to point on the stored value ( index ) and to display it. 
-let resultsArr = [];
-let arrIndex = 0;
-
-//Cows and bulls the values for the code symbols for the users. 
-
-let cows =0;
-let bulls = 0;
-
 //function starts everytime we click on guess button.
-console.log(digitsNumber.toString().split(''))
 checkDigits.addEventListener("click",()=>{
 
     //storing the user gussed number into array and sperating values so we can compare the values between the last user input and genrated digits. 
@@ -57,11 +57,11 @@ checkDigits.addEventListener("click",()=>{
     console.log(`last user input : ${resultsArr[arrIndex]}`)
 
     //If correct number in wrong postion increase cows by 1; 
-    stringDigitsNumber = stringDigitsNumber.filter(val=> stringGussedNumber.includes(val)  ? cows+=1:cows );
+    stringDigitsNumber = stringDigitsNumber.filter(val=> stringGussedNumber.includes(val)  ? cows+=1:cows);
 
     //second way for the bulls if correct number and correct postion increase it by 1
     //Starting loop on the user input ( 4 digits )
-    for(let i = 0; i<stringGussedNumber.length;i++)
+    for(let i = 0; i<stringDigitsNumber.length;i++)
     {
         // if correct number in the correct position we increase bulls by 1
         if(stringGussedNumber[i]==stringDigitsNumber[i])
